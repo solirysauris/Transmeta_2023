@@ -1,0 +1,122 @@
+  519  head -20 amp_res_1.fastq.gz
+  520  head -20 amp_res_1.fastq
+  521  wc -l amp_res_1.fastq
+  522  wc -l amp_res_2.fastq
+  523  head -20 amp_res_2.fastq
+  524  mamba install -c bioconda fastqc
+  525  apt-get install fastqc
+  526  brew install fastqc
+  527  fastqc
+  528  fastqc -h
+  529  fastqc -h
+  530  fastqc -o ./Users/margaritatis/Documents/itmo/meta/align/raw/amp_res_1.fastq /Users/margaritatis/Documents/itmo/meta/align/raw/amp_res_2.fastq
+  531  fastqc -o ./Users/margaritatis/Documents/itmo/meta/align/raw/amp_res_1.fastq ./Users/margaritatis/Documents/itmo/meta/align/raw/amp_res_2.fastq
+  532  fastqc -o . /Users/margaritatis/Documents/itmo/meta/align/raw/amp_res_1.fastq . /Users/margaritatis/Documents/itmo/meta/align/raw/amp_res_2.fastq
+  533  ls
+  534  ./amp_res_1_fastqc.html
+  535  cat amp_res_1_fastqc.html
+  536  conda install Trimmomatic
+  537  conda config --add channels defaults\nconda config --add channels bioconda\nconda config --add channels conda-forge\n
+  538  conda create -n trimmomatic trimmomatic
+  539       $ conda activate trimmomatic
+  540  conda activate trimmomatic
+  541  TrimmomaticPE
+  542  trimmomatic
+  543  cd ./Documents/itmo/meta/align/raw
+  544  ls
+  545  java -jar trimmomatic-0.39.jar PE amp_res_1.fastq.gz amp_res_2.fastq.gz output_forward_paired.fq.gz output_forward_unpaired.fq.gz output_reverse_paired.fq.gz output_reverse_unpaired.fq.gz ILLUMINACLIP:TruSeq3-PE.fa:2:30:10:2:True LEADING:3 TRAILING:3 MINLEN:36
+  546  trimmomatic version
+  547  trimmomatic -version
+  548  trimmomatic PE -threads 4 amp_res_1.fastq amp_res_2.fastq \\n              SRR_1056_1.trimmed.fastq SRR_1056_1un.trimmed.fastq \\n              SRR_1056_2.trimmed.fastq SRR_1056_2un.trimmed.fastq \\n              ILLUMINACLIP:SRR_adapters.fa SLIDINGWINDOW:4:20\n
+  549  trimmomatic PE -threads 4 amp_res_1.fastq amp_res_2.fastq \\n              /Users/margaritatis/Documents/itmo/meta/align/raw/1tr.fastq /Users/margaritatis/Documents/itmo/meta/align/raw/1utr.fastq \\n              /Users/margaritatis/Documents/itmo/meta/align/raw/2tr.fastq /Users/margaritatis/Documents/itmo/meta/align/raw/2utr.fastq \\n              LEADING: 20 TRAILING: 20 MINLEN:20 SLIDINGWINDOW:10:20\n
+  550  trimmomatic PE -threads 4 /Users/margaritatis/Documents/itmo/meta/align/raw/amp_res_1.fastq /Users/margaritatis/Documents/itmo/meta/align/raw/amp_res_2.fastq \\n              /Users/margaritatis/Documents/itmo/meta/align/raw/1tr.fastq /Users/margaritatis/Documents/itmo/meta/align/raw/1utr.fastq \\n              /Users/margaritatis/Documents/itmo/meta/align/raw/2tr.fastq /Users/margaritatis/Documents/itmo/meta/align/raw/2utr.fastq \\n              LEADING: 20 TRAILING: 20 MINLEN:20 SLIDINGWINDOW:10:20\n
+  551  java -jar /Users/margaritatis/miniconda3/envs/trimmomatic/share/trimmomatic-0.39-2/trimmomatic.jar PE -threads 4 /Users/margaritatis/Documents/itmo/meta/align/raw/amp_res_1.fastq /Users/margaritatis/Documents/itmo/meta/align/raw/amp_res_2.fastq \\n              /Users/margaritatis/Documents/itmo/meta/align/raw/1tr.fastq /Users/margaritatis/Documents/itmo/meta/align/raw/1utr.fastq \\n              /Users/margaritatis/Documents/itmo/meta/align/raw/2tr.fastq /Users/margaritatis/Documents/itmo/meta/align/raw/2utr.fastq \\n              LEADING: 20 TRAILING: 20 MINLEN:20 SLIDINGWINDOW:10:20\n
+  552  java -jar /Users/margaritatis/miniconda3/envs/trimmomatic/share/trimmomatic-0.39-2/trimmomatic.jar PE /Users/margaritatis/Documents/itmo/meta/align/raw/amp_res_1.fastq /Users/margaritatis/Documents/itmo/meta/align/raw/amp_res_2.fastq \\n              /Users/margaritatis/Documents/itmo/meta/align/raw/1tr.fastq /Users/margaritatis/Documents/itmo/meta/align/raw/1utr.fastq \\n              /Users/margaritatis/Documents/itmo/meta/align/raw/2tr.fastq /Users/margaritatis/Documents/itmo/meta/align/raw/2utr.fastq \\n              LEADING: 20 TRAILING: 20 MINLEN:20 SLIDINGWINDOW:10:20\n
+  553  java -jar /Users/margaritatis/miniconda3/envs/trimmomatic/share/trimmomatic-0.39-2/trimmomatic.jar PE /Users/margaritatis/Documents/itmo/meta/align/raw/amp_res_1.fastq /Users/margaritatis/Documents/itmo/meta/align/raw/amp_res_2.fastq \\n              /Users/margaritatis/Documents/itmo/meta/align/raw/1tr.fq.gz /Users/margaritatis/Documents/itmo/meta/align/raw/1utr.fq.gz \\n              /Users/margaritatis/Documents/itmo/meta/align/raw/2tr.fq.gz /Users/margaritatis/Documents/itmo/meta/align/raw/2utr.fq.gz \\n              LEADING: 20 TRAILING: 20 MINLEN:20 SLIDINGWINDOW:10:20\n
+  554  conda install bwa
+  555  bwa
+  556  fastqc
+  557  conda env list
+  558  cd ./documents/itmo/meta/align/raw
+  559  java -jar /Users/margaritatis/miniconda3/envs/trimmomatic/share/trimmomatic-0.39-2/trimmomatic.jar PE /Users/margaritatis/Documents/itmo/meta/align/raw/amp_res_1.fastq /Users/margaritatis/Documents/itmo/meta/align/raw/amp_res_2.fastq \\n              /Users/margaritatis/Documents/itmo/meta/align/raw/1tr.fq.gz /Users/margaritatis/Documents/itmo/meta/align/raw/1utr.fq.gz \\n              /Users/margaritatis/Documents/itmo/meta/align/raw/2tr.fq.gz /Users/margaritatis/Documents/itmo/meta/align/raw/2utr.fq.gz \\n              LEADING:20 TRAILING:20 MINLEN:20 SLIDINGWINDOW:10:20\n
+  560  trimmomatic PE /Users/margaritatis/Documents/itmo/meta/align/raw/amp_res_1.fastq /Users/margaritatis/Documents/itmo/meta/align/raw/amp_res_2.fastq \\n              /Users/margaritatis/Documents/itmo/meta/align/raw/1tr.fq.gz /Users/margaritatis/Documents/itmo/meta/align/raw/1utr.fq.gz \\n              /Users/margaritatis/Documents/itmo/meta/align/raw/2tr.fq.gz /Users/margaritatis/Documents/itmo/meta/align/raw/2utr.fq.gz \\n              LEADING:20 TRAILING:20 MINLEN:20 SLIDINGWINDOW:10:20\n
+  561  conda activate trimmomatic
+  562  java -jar /Users/margaritatis/miniconda3/envs/trimmomatic/share/trimmomatic-0.39-2/trimmomatic.jar PE /Users/margaritatis/Documents/itmo/meta/align/raw/amp_res_1.fastq /Users/margaritatis/Documents/itmo/meta/align/raw/amp_res_2.fastq \\n              /Users/margaritatis/Documents/itmo/meta/align/raw/1tr.fq.gz /Users/margaritatis/Documents/itmo/meta/align/raw/1utr.fq.gz \\n              /Users/margaritatis/Documents/itmo/meta/align/raw/2tr.fq.gz /Users/margaritatis/Documents/itmo/meta/align/raw/2utr.fq.gz \\n              LEADING:20 TRAILING:20 MINLEN:20 SLIDINGWINDOW:10:20\n
+  563  cd ./Documents/itmo/meta/align/raw
+  564  fastqc -o . /Users/margaritatis/Documents/itmo/meta/align/raw/1tr.fq /Users/margaritatis/Documents/itmo/meta/align/raw/2tr.fq
+  565  wc -l 1tr.fq
+  566  wc -l 2tr.fq
+  567  bwa index
+  568  conda activate trimmomatic
+  569  bwa index
+  570  bwa index GCF_000005845.2_ASM584v2_genomic.fna
+  571  bwa mem GCF_000005845.2_ASM584v2_genomic.fna 1tr.fq 2tr.fq > alignment.sam
+  572  samtools
+  573  conda install samtools
+  574  samtools view -S -b alignment.sam > alignment.bam
+  575  samtools flagstat alignment.bam
+  576  pwd
+  577  cd ./Documents/itmo/meta/align/raw
+  578  samtools sort alignment.bam alignment_sorted
+  579  conda actimate trimmomatic
+  580  conda activate trimmomatic
+  581  samtools sort alignment.bam alignment_sorted
+  582  samtools index alignment_sorted.bam
+  583  samtools sort alignment.bam alignment_sorted.bam
+  584  samtools index alignment_sorted.bam
+  585  samtools sort alignment.bam -o alignment_sorted.bam
+  586  samtools index alignment_sorted.bam
+  587  samtools mpileup -f GCF_000005845.2_ASM584v2_genomic.fna alignment_sorted.bam >  my.mpileup
+  588  java -jar VarScan.v2.4.0.jar mpileup2snp -h\n
+  589  conda install -c bioconda varscan
+  590  java -jar VarScan.v2.4.0.jar mpileup2snp -h\n
+  591  java -jar VarScan.jar
+  592  java -jar /Users/margaritatis/miniconda3/envs/trimmomatic/share/varscan-2.4.6-0
+  593  java -jar /Users/margaritatis/miniconda3/envs/trimmomatic/share/varscan-2.4.6-0/VarScan.jar
+  594  java -jar /Users/margaritatis/miniconda3/envs/trimmomatic/share/varscan-2.4.6-0/VarScan.jar mpileup2snp -h\n
+  595  java -jar  /Users/margaritatis/miniconda3/envs/trimmomatic/share/varscan-2.4.6-0/VarScan.jar mpileup2snp my.mpileup --min-var-freq N --variants --output-vcf 1 > VarScan_results.vcf\n
+  596  java -jar  /Users/margaritatis/miniconda3/envs/trimmomatic/share/varscan-2.4.6-0/VarScan.jar mpileup2snp my.mpileup --min-var-freq 50 --variants --output-vcf 1 > VarScan_results.vcf\n
+  597  java -jar  /Users/margaritatis/miniconda3/envs/trimmomatic/share/varscan-2.4.6-0/VarScan.jar mpileup2snp my.mpileup --min-var-freq 20 --variants --output-vcf 1 > VarScan_results1.vcf\n
+  598  java -jar  /Users/margaritatis/miniconda3/envs/trimmomatic/share/varscan-2.4.6-0/VarScan.jar mpileup2snp my.mpileup --min-var-freq 80 --variants --output-vcf 1 > VarScan_results1.vcf\n
+  599  java -jar  /Users/margaritatis/miniconda3/envs/trimmomatic/share/varscan-2.4.6-0/VarScan.jar mpileup2snp my.mpileup --min-var-freq 0.5 --variants --output-vcf 1 > VarScan_results1.vcf\n
+  600  grep -vm20 \# *vcf
+  601  grep -vm20 \# *vcf
+  602  java -jar  /Users/margaritatis/miniconda3/envs/trimmomatic/share/varscan-2.4.6-0/VarScan.jar mpileup2snp my.mpileup --min-var-freq 0.2 --variants --output-vcf 1 > VarScan_results2.vcf\n
+  603  conda install SnpEff
+  604  touch snpEff.config
+  605  nano snpEff.config
+  606  mkdir -p data/k12
+  607  ls
+  608  cd ./data.k12
+  609  cp GCF_000005845.2_ASM584v2_genomic.gbff data/k12/genes.gbk\n
+  610  cp GCF_000005845.2_ASM584v2_genomic.gbff data/k12/genes.gbk\n
+  611  ls
+  612  cd ./data/k12
+  613  cp GCF_000005845.2_ASM584v2_genomic.gbff data/k12/genes.gbk\n
+  614  cp GCF_000005845.2_ASM584v2_genomic.gbff genes.gbk\n
+  615  snpEff build -genbank -v k12
+  616  snpEff ann k12 VarScan_results.vcf > VarScan_results_annotated.vcf
+  617  snpEff ann k12 VarScan_results2.vcf > VarScan_results_annotated.vcf
+  618  cd../
+  619  cd ../
+  620  cd ../
+  621  snpEff ann k12 data/k12/VarScan2_results.vcf > Varscan_results_annotated.vcf
+  622  cat sn
+  623  cat snpEff.config
+  624  snpEff ann k12 data/k12/VarScan2_results.vcf > Varscan_results_annotated.vcf
+  625  snpEff ann k12 data/k12/VarScan_results2.vcf > Varscan_results_annotated.vcf
+  626  snpEff build -genbank -v k12
+  627  snpEff ann k12 data/k12/VarScan_results2.vcf > Varscan_results_annotated.vcf
+  628  conda activate trimmomatic
+  629  cd ./documents/itmo/meta/align/raw
+  630  touch snpEff.config
+  631  echo "k12.genome : ecoli_K12" > snpEff.config
+  632  cat snpEff.config
+  633  mkdir -p data/k12
+  634  cp GCF_000005845.2_ASM584v2_genomic.gbff data/k12/genes.gbk
+  635  snpEff build -genbank -v k12
+  636  snpEff ann k12 VarScan_results.vcf > VarScan_results_annotated.vcf
+  637  snpEff ann k12 VarScan_results2.vcf > VarScan_results_annotated.vcf
+  638  snpEff ann k12 VarScan_results2.vcf > VarScan_results_annotated1.vcf
+  639  history
+  640  history 100
